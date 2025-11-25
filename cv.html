@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CV – YOUR NAME</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .cv-frame {
+      width: 100%;
+      height: 80vh;
+      border: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>YOUR NAME</h1>
+      <p class="tagline">Astrophysics · Data Science · Cello</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Curriculum Vitae</h2>
+      <p>
+        Download as PDF:
+        <a href="CV.pdf" target="_blank" rel="noopener noreferrer">CV.pdf</a>
+      </p>
+
+      <iframe class="cv-frame" src="CV.pdf">
+        Your browser does not support embedded PDFs.
+        You can <a href="CV.pdf" target="_blank">download the CV here</a>.
+      </iframe>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> YOUR NAME</p>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>
