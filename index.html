@@ -5,38 +5,66 @@
   <title>Vincent Louis Claes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Center hero area */
+    .hero {
+      text-align: center;
+      padding: 10vh 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #cccccc;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid #66c0ff;
+      border-radius: 6px;
+      color: #66c0ff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .hero-buttons a:hover {
+      background: rgba(102,192,255,0.15);
+    }
+
+  </style>
 </head>
 <body>
 
   <header class="site-header">
-    <div class="container site-header-inner">
+    <div class="container site-header-inner" style="justify-content:center; text-align:center;">
       <div>
         <h1>Vincent Louis Claes</h1>
-        <p class="tagline">Astronomy &amp; Astrophysics · Interdisciplinary Physics · Cello Performance</p>
       </div>
-      <nav class="nav">
-        <a href="/">Home</a>
-        <a href="about.html">About</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-        <a href="contact.html">Contact</a>
-      </nav>
     </div>
   </header>
 
   <main class="container">
-    <section>
-      <h2>Welcome</h2>
-      <p>
-        I’m an undergraduate at the University of Michigan–Ann Arbor studying
-        Astronomy &amp; Astrophysics, Interdisciplinary Physics, and Cello Performance.
-        I’m interested in galaxy dynamics, barred galaxies, and data-driven astrophysics.
+    <div class="hero">
+      <h1>Vincent Louis Claes</h1>
+      <p class="tagline">
+        Astronomy & Astrophysics · Interdisciplinary Physics · Cello Performance
       </p>
-      <p>
-        This site collects my research, CV, and contact information. Use the navigation
-        above to learn more.
-      </p>
-    </section>
+
+      <div class="hero-buttons">
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
   </main>
 
   <footer class="site-footer">
