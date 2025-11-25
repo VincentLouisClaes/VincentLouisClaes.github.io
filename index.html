@@ -5,63 +5,83 @@
   <title>Vincent Louis Claes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* Center hero area */
+    /* Fullscreen hero on the home page */
     .hero {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 10vh 2rem;
+      background: url("background.jpg") center/cover no-repeat fixed;
+      position: relative;
     }
 
-    .hero h1 {
+    /* Dark overlay so text stays readable */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+    }
+
+    .hero-title {
       font-size: 3rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .hero .tagline {
-      font-size: 1.1rem;
       margin-bottom: 2rem;
-      color: #cccccc;
     }
 
     .hero-buttons a {
       display: inline-block;
-      margin: 0.5rem 1rem;
-      padding: 0.7rem 1.5rem;
-      border: 1px solid #66c0ff;
+      margin: 0.5rem 0.75rem;
+      padding: 0.7rem 1.6rem;
+      border: 1px solid #ffffff;
       border-radius: 6px;
-      color: #66c0ff;
+      color: #ffffff;
       text-decoration: none;
       font-size: 1rem;
-      transition: 0.3s;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 0.25s, color 0.25s, transform 0.25s;
     }
 
     .hero-buttons a:hover {
-      background: rgba(102,192,255,0.15);
+      background: rgba(255, 255, 255, 0.18);
+      transform: translateY(-2px);
     }
 
+    @media (max-width: 600px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+      .hero-buttons a {
+        display: block;
+        margin: 0.4rem auto;
+        width: 70%;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-  <header class="site-header">
-    <div class="container site-header-inner" style="justify-content:center; text-align:center;">
-      <div>
-        <h1>Vincent Louis Claes</h1>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="hero">
-      <h1>Vincent Louis Claes</h1>
-      <p class="tagline">
-        Astronomy & Astrophysics · Interdisciplinary Physics · Cello Performance
-      </p>
+  <main class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Vincent Louis Claes</h1>
 
       <div class="hero-buttons">
         <a href="about.html">About</a>
         <a href="research.html">Research</a>
         <a href="cv.html">CV</a>
+        <a href="interests.html">Other Interests</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
