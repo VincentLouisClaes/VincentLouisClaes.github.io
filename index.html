@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* Fullscreen hero on the home page */
+    /* Fullscreen hero */
     .hero {
       min-height: 100vh;
       margin: 0;
@@ -20,7 +20,7 @@
       position: relative;
     }
 
-    /* Dark overlay so text stays readable */
+    /* Dark overlay for readability */
     .hero::before {
       content: "";
       position: absolute;
@@ -36,9 +36,11 @@
 
     .hero-title {
       font-size: 3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.2rem;
+      color: #ffffff;
     }
 
+    /* Buttons */
     .hero-buttons a {
       display: inline-block;
       margin: 0.5rem 0.75rem;
@@ -58,13 +60,19 @@
       transform: translateY(-2px);
     }
 
+    /* Copyright positioned near bottom of hero */
     .hero-copy {
-      margin-top: 2rem;
+      position: absolute;
+      bottom: 4vh;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 0.9rem;
-      color: #dddddd;
-      opacity: 0.8;
+      color: #e6e6e6;
+      opacity: 0.85;
+      pointer-events: none;
     }
-    
+
+    /* Mobile responsive */
     @media (max-width: 600px) {
       .hero-title {
         font-size: 2.2rem;
@@ -91,6 +99,7 @@
         <a href="interests.html">Other Interests</a>
         <a href="contact.html">Contact</a>
       </div>
+
       <p class="hero-copy">&copy; 2025 Vincent Louis Claes</p>
     </div>
   </main>
