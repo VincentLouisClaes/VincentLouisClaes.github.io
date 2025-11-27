@@ -216,3 +216,67 @@ a:hover {
     padding: 1.5rem;
   }
 }
+
+/* === Vincent customizations =================================== */
+
+/* Use your wave background image instead of the default gradients */
+#bg:before {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+#bg:after {
+  background: rgba(0, 0, 0, 0.55); /* darken a bit for contrast */
+}
+
+/* About photos layout (same vibe as your old about page) */
+.about-photos-section {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.about-photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.about-photo {
+  flex: 1 1 260px;
+  max-width: 48%;
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 380px;         /* make both images the same height */
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.about-photo figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .about-photo-row {
+    flex-direction: column;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-photo img {
+    height: 320px;
+  }
+}
