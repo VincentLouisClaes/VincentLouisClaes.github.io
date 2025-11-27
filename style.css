@@ -108,11 +108,11 @@ a:hover {
 
 .about-photo img {
   width: 100%;
-  height: 380px;
+  height: 420px;         /* overlay + about share this */
   object-fit: cover;
   object-position: center;
   display: block;
-  border-radius: 12px;
+  border-radius: 16px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
 }
 
@@ -144,6 +144,10 @@ a:hover {
   .about-photo {
     max-width: 100%;
   }
+
+  .about-photo img {
+    height: 360px;
+  }
 }
 
 /* ===== Overlay for About panel on home page ===== */
@@ -168,7 +172,7 @@ a:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* The translucent dark “card” */
+/* The translucent dark card */
 .overlay-panel {
   position: relative;
   max-width: 960px;
@@ -203,117 +207,12 @@ a:hover {
   margin-top: 0;
 }
 
-/* About photos inside overlay */
-.about-photos-section {
-  margin: 2.5rem 0 1.5rem;
-}
+/* About photos inside overlay reuse the same classes */
 
-.about-photo-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: space-between;
-}
-
-.about-photo {
-  flex: 1 1 260px;
-  max-width: 48%;
-  margin: 0;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
-}
-
-.about-photo figcaption {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: #cccccc;
-  text-align: center;
-}
-
+/* Extra responsive tweaks for overlay */
 @media (max-width: 700px) {
   .overlay-panel {
     width: calc(100% - 1.5rem);
     padding: 1.5rem;
-  }
-
-  .about-photo-row {
-    flex-direction: column;
-  }
-
-  .about-photo img {
-    height: 360px;
-  }
-}
-
-/* ======================================== */
-/* === HOMEPAGE TITLE + UNDERLINE BAR ===== */
-/* ======================================== */
-
-.hero-top {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2.2rem;
-}
-
-.hero-title {
-  width: 560px;  /* same as buttons + underline */
-  max-width: 90%;
-}
-
-.hero-bar {
-  width: 560px;
-  max-width: 80%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.45);
-  margin-top: 14px;
-}
-
-/* Button row: restored natural spacing */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem 1rem;  /* restore original beautiful spacing */
-  width: 560px;       /* matches underline width */
-  max-width: 90%;
-}
-
-.hero-buttons a {
-  display: inline-block;
-  padding: 0.7rem 1.6rem;
-  border: 1px solid #ffffff;
-  border-radius: 6px;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: background 0.25s, transform 0.25s;
-}
-
-.hero-buttons a:hover {
-  background: rgba(255, 255, 255, 0.18);
-  transform: translateY(-2px);
-}
-
-@media (max-width: 600px) {
-  .hero-buttons {
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 80%;
-  }
-
-  .hero-bar {
-    width: 80%;
   }
 }
