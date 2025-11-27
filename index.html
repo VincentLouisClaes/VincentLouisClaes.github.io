@@ -19,6 +19,21 @@
       background: url("background.jpg") center/cover no-repeat fixed;
       position: relative;
     }
+    .hero-underline {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }  
+
+    .hero-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.4);
+    }
 
     /* Dark overlay */
     .hero::before {
@@ -178,8 +193,7 @@
 
   <main class="hero">
     <div class="hero-content">
-      <h1 class="hero-title">Vincent Louis Claes</h1>
-    <h1 class="hero-name">Vincent Louis Claes</h1>
+      <h1 class="hero-title hero-underline">Vincent Louis Claes</h1>
       <div class="hero-buttons">
         <a href="about.html" class="hero-button" data-open-about>ABOUT</a>
         <a href="research.html">Research</a>
