@@ -108,7 +108,9 @@ a:hover {
 
 .about-photo img {
   width: 100%;
-  height: auto;
+  height: 380px;          /* make both images the same height */
+  object-fit: cover;      /* crop to fill without distortion */
+  object-position: center;
   display: block;
   border-radius: 12px;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
