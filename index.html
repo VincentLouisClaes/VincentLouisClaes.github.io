@@ -1,231 +1,362 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Vincent Louis Claes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
 
-  <style>
-    /* Fullscreen hero */
-    .hero {
-      min-height: 100vh;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      background: url("background.jpg") center/cover no-repeat fixed;
-      position: relative;
-      text-align: center;
-    }
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-    /* Dark overlay on hero */
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-    }
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Dimension</h1>
+								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
+								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">Intro</a></li>
+								<li><a href="#work">Work</a></li>
+								<li><a href="#about">About</a></li>
+								<li><a href="#contact">Contact</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      margin-top: 33vh;
-      padding: 0;
-      text-align: center;
-    }
+				<!-- Main -->
+					<div id="main">
 
-    /* Shrink-wrapped block that controls width of title, bar, and buttons */
-    .hero-block {
-      display: inline-block;   /* width = content (the button row) */
-    }
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Intro</h2>
+								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+							</article>
 
-    .hero-title {
-      font-size: 3rem;
-      color: #ffffff;
-      margin: 0;
-    }
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+							</article>
 
-    /* Underline bar – matches button row width via .hero-block */
-    .hero-bar {
-      width: 100%;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.45);
-      margin: 0.8rem 0 1.6rem;
-    }
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">About</h2>
+								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+							</article>
 
-    /* Buttons: single nice row */
-    .hero-buttons {
-      display: flex;
-      flex-wrap: nowrap !important;  /* <-- NEVER wrap */
-      justify-content: center;
-      gap: 0.5rem 0.9rem;
-      width: max-content;            /* <-- shrink-wrap to full button row */
-      margin: 1.8rem auto 0;
-    }
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
 
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
 
-    .hero-buttons a {
-      display: inline-block;
-      padding: 0.7rem 1.6rem;
-      border: 1px solid #ffffff;
-      border-radius: 6px;
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      transition: background 0.25s, transform 0.25s;
-      white-space: nowrap;
-    }
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
 
-    .hero-buttons a:hover {
-      background: rgba(255, 255, 255, 0.18);
-      transform: translateY(-2px);
-    }
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
 
-    /* Fixed footer at bottom of PAGE */
-    .page-footer {
-      position: fixed;
-      bottom: 1.5vh;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.9rem;
-      color: #e6e6e6;
-      opacity: 0.85;
-      z-index: 999;
-      pointer-events: none;
-    }
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
 
-    /* Mobile responsiveness */
-    @media (max-width: 700px) {
-      .hero-title {
-        font-size: 2.2rem;
-      }
+								<section>
+									<h3 class="major">Lists</h3>
 
-      .hero-block {
-        width: 80%;
-      }
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
 
-      .hero-buttons {
-        flex-wrap: wrap;       /* allow wrapping on small screens */
-        justify-content: center;
-      }
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
 
-      .hero-buttons a {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
-</head>
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
 
-<!-- About overlay -->
-<div id="about-overlay" class="overlay hidden">
-  <div class="overlay-backdrop"></div>
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
 
-  <div class="overlay-panel" role="dialog" aria-modal="true" aria-labelledby="about-overlay-title">
-    <button class="overlay-close" aria-label="Close about panel">&times;</button>
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
 
-    <div class="overlay-content">
-      <h2 id="about-overlay-title">About</h2>
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
 
-      <p>
-        I am an undergraduate at the University of Michigan–Ann Arbor pursuing degrees
-        in Astronomy &amp; Astrophysics, Interdisciplinary Physics, and Cello Performance.
-        My interests span galaxy dynamics, barred galaxies, and the use of simulations
-        and survey data to understand galactic structure and evolution.
-      </p>
-      <p>
-        Outside of research, I work as a Data Management Fellow at the Center for Academic
-        Innovation and serve as principal cellist of UM's University Philharmonia Orchestra.
-        I enjoy connecting scientific work with communication, outreach, and music.
-      </p>
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
 
-      <section class="about-photos-section">
-        <div class="about-photo-row">
-          <figure class="about-photo">
-            <img src="AAS246_PM_0434.jpg"
-                 alt="Vincent presenting barred-galaxy research in the Chambliss Poster Competition finals at AAS 246." />
-            <figcaption>
-              Presenting barred-galaxy research in the Chambliss Poster Competition finals at AAS 246.
-            </figcaption>
-          </figure>
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
 
-          <figure class="about-photo">
-            <img src="centerstagestrings.jpg"
-                 alt="Cellist Vincent Louis Claes performing in Britton Hall, Center Stage Strings." />
-            <figcaption>
-              Performance at Britton Hall, Center Stage Strings, 2023.
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-    </div>
-  </div>
-</div>
+							</article>
 
-<script>
-  const aboutButton = document.querySelector('[data-open-about]');
-  const aboutOverlay = document.getElementById('about-overlay');
-  const aboutClose = document.querySelector('.overlay-close');
+					</div>
 
-  function openAbout(event) {
-    if (event) event.preventDefault(); // stop navigation
-    aboutOverlay.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
-  }
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
 
-  function closeAbout() {
-    aboutOverlay.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
+			</div>
 
-  if (aboutButton) {
-    aboutButton.addEventListener('click', openAbout);
-  }
+		<!-- BG -->
+			<div id="bg"></div>
 
-  if (aboutClose) {
-    aboutClose.addEventListener('click', closeAbout);
-  }
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
-  // Click outside the card to close
-  aboutOverlay.addEventListener('click', (event) => {
-    if (event.target === aboutOverlay || event.target.classList.contains('overlay-backdrop')) {
-      closeAbout();
-    }
-  });
-
-  // Press Escape to close
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && !aboutOverlay.classList.contains('hidden')) {
-      closeAbout();
-    }
-  });
-</script>
-
-<body>
-
-  <main class="hero">
-    <div class="hero-content">
-      <div class="hero-block">
-        <h1 class="hero-title">Vincent Louis Claes</h1>
-        <div class="hero-bar"></div>
-
-        <div class="hero-buttons">
-          <a href="about.html" class="hero-button" data-open-about>ABOUT</a>
-          <a href="research.html">RESEARCH</a>
-          <a href="cv.html">CV</a>
-          <a href="interests.html">OTHER INTERESTS</a>
-          <a href="contact.html">CONTACT</a>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- FIXED copyright at bottom of page -->
-  <p class="page-footer">&copy; 2025 Vincent Louis Claes</p>
-
-</body>
+	</body>
 </html>
