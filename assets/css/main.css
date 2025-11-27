@@ -1711,3 +1711,17 @@ input, select, textarea {
     height: 260px;
   }
 }
+
+/* === Vincent: custom background image === */
+
+#bg:before {
+  background-image: url("../images/background.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  opacity: 1 !important;
+}
+
+#bg:after {
+  background: rgba(0, 0, 0, 0.55) !important; /* darken overlay for contrast */
+}
