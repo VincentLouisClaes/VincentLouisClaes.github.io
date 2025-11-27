@@ -273,11 +273,14 @@ a:hover {
   margin-top: 14px;
 }
 
+/* Button row: restored natural spacing */
 .hero-buttons {
   display: flex;
-  justify-content: space-between;
-  width: 560px;
-  max-width: 80%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;  /* restore original beautiful spacing */
+  width: 560px;       /* matches underline width */
+  max-width: 90%;
 }
 
 .hero-buttons a {
