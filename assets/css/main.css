@@ -1140,9 +1140,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
@@ -1656,3 +1659,55 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* === Vincent about-page image sizing fix === */
+
+.about-photos-section {
+  margin: 2.5rem 0 1.5rem;
+}
+
+.about-photo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;      /* center the pair */
+}
+
+.about-photo {
+  flex: 1 1 260px;
+  max-width: 380px;             /* <-- hard cap so images can't get huge */
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 280px;                /* smaller display height */
+  object-fit: cover;            /* crop nicely */
+  object-position: center;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+.about-photo figcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #cccccc;
+  text-align: center;
+}
+
+/* Stack vertically on narrow screens */
+@media (max-width: 700px) {
+  .about-photo-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-photo {
+    max-width: 100%;
+  }
+
+  .about-photo img {
+    height: 260px;
+  }
+}
