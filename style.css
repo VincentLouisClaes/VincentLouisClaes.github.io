@@ -116,6 +116,10 @@ a:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
 }
 
+.portrait-top {
+  object-position: top;   /* keep the head fully visible */
+}
+
 .about-photo figcaption {
   margin-top: 0.75rem;
   font-size: 0.9rem;
