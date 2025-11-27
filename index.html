@@ -133,6 +133,46 @@
   </div>
 </div>
 
+<script>
+  const aboutButton = document.querySelector('[data-open-about]');
+  const aboutOverlay = document.getElementById('about-overlay');
+  const aboutClose = document.querySelector('.overlay-close');
+
+  function openAbout(event) {
+    if (event) event.preventDefault(); // stop navigation
+    aboutOverlay.classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // prevent background scroll
+  }
+
+  function closeAbout() {
+    aboutOverlay.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  if (aboutButton) {
+    aboutButton.addEventListener('click', openAbout);
+  }
+
+  if (aboutClose) {
+    aboutClose.addEventListener('click', closeAbout);
+  }
+
+  // Click outside the card to close
+  aboutOverlay.addEventListener('click', (event) => {
+    if (event.target === aboutOverlay || event.target.classList.contains('overlay-backdrop')) {
+      closeAbout();
+    }
+  });
+
+  // Press Escape to close
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !aboutOverlay.classList.contains('hidden')) {
+      closeAbout();
+    }
+  });
+</script>
+
+
 
 <body>
 
