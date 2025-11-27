@@ -13,26 +13,11 @@
       margin: 0;
       padding: 0;
       display: flex;
-      align-items: flex-start;  /* <-- was center */
+      align-items: flex-start;
       justify-content: center;
       text-align: center;
       background: url("background.jpg") center/cover no-repeat fixed;
       position: relative;
-    }
-    .hero-underline {
-      position: relative;
-      display: inline-block;
-      padding-bottom: 12px;
-    }  
-
-    .hero-underline::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.4);
     }
 
     /* Dark overlay */
@@ -46,20 +31,46 @@
     .hero-content {
       position: relative;
       z-index: 1;
-      margin-top: 33vh;   /* <<< MOVE NAME + BUTTONS UP/DOWN HERE */
+      margin-top: 33vh;
       padding: 0;
     }
 
+    /* Title */
     .hero-title {
       font-size: 3rem;
-      margin-bottom: 2.2rem;
       color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Group: name + underline */
+    .hero-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 2.2rem; /* distance between bar and button row */
+    }
+
+    /* Underline bar */
+    .hero-bar {
+      width: 560px; /* matches button row width */
+      max-width: 80%;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.45);
+      margin-top: 14px; /* distance between name and bar */
     }
 
     /* Buttons */
+    .hero-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 560px; /* matches underline width */
+      max-width: 80%;
+    }
+
     .hero-buttons a {
       display: inline-block;
-      margin: 0.5rem 0.75rem;
       padding: 0.7rem 1.6rem;
       border: 1px solid #ffffff;
       border-radius: 6px;
@@ -76,10 +87,10 @@
       transform: translateY(-2px);
     }
 
-    /* Fixed footer at bottom of PAGE */
+    /* Footer */
     .page-footer {
       position: fixed;
-      bottom: 1.5vh;   /* adjust up/down as needed */
+      bottom: 1.5vh;
       left: 50%;
       transform: translateX(-50%);
       font-size: 0.9rem;
@@ -89,21 +100,25 @@
       pointer-events: none;
     }
 
-    /* Mobile responsiveness */
+    /* Mobile */
     @media (max-width: 600px) {
       .hero-title {
         font-size: 2.2rem;
       }
-      .hero-buttons a {
-        display: block;
-        margin: 0.4rem auto;
-        width: 70%;
+      .hero-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 80%;
+      }
+      .hero-bar {
+        width: 80%;
       }
     }
   </style>
 </head>
 
-<!-- About overlay -->
+
+<!-- ABOUT OVERLAY (unchanged) -->
 <div id="about-overlay" class="overlay hidden">
   <div class="overlay-backdrop"></div>
 
@@ -116,31 +131,22 @@
       <p>
         I am an undergraduate at the University of Michigan–Ann Arbor pursuing degrees
         in Astronomy &amp; Astrophysics, Interdisciplinary Physics, and Cello Performance.
-        My interests span galaxy dynamics, barred galaxies, and the use of simulations
-        and survey data to understand galactic structure and evolution.
       </p>
+
       <p>
-        Outside of research, I work as a Data Management Fellow at the Center for Academic
-        Innovation and serve as principal cellist of UM's University Philharmonia Orchestra. I enjoy connecting
-        scientific work with communication, outreach, and music.
+        Outside of research, I work as a Data Management Fellow and serve as principal cellist in UPO.
       </p>
 
       <section class="about-photos-section">
         <div class="about-photo-row">
           <figure class="about-photo">
-            <img src="AAS246_PM_0434.jpg"
-                 alt="Vincent presenting barred-galaxy research in the Chambliss Poster Competition finals at AAS 246." />
-            <figcaption>
-              Presenting barred-galaxy research in the Chambliss Poster Competition finals at AAS 246.
-            </figcaption>
+            <img src="AAS246_PM_0434.jpg" alt="AAS Poster Presentation" />
+            <figcaption>Chambliss Poster Finals at AAS 246.</figcaption>
           </figure>
 
           <figure class="about-photo">
-            <img src="centerstagestrings.jpg"
-                 alt="Cellist Vincent Louis Claes performing in Britton Hall, Center Stage Strings." />
-            <figcaption>
-              Performance at Britton Hall, Center Stage Strings, 2023.
-            </figcaption>
+            <img src="centerstagestrings.jpg" alt="Cello Performance" />
+            <figcaption>Center Stage Strings, Britton Hall.</figcaption>
           </figure>
         </div>
       </section>
@@ -148,15 +154,16 @@
   </div>
 </div>
 
+
 <script>
   const aboutButton = document.querySelector('[data-open-about]');
   const aboutOverlay = document.getElementById('about-overlay');
   const aboutClose = document.querySelector('.overlay-close');
 
   function openAbout(event) {
-    if (event) event.preventDefault(); // stop navigation
+    if (event) event.preventDefault();
     aboutOverlay.classList.remove('hidden');
-    document.body.style.overflow = 'hidden'; // prevent background scroll
+    document.body.style.overflow = 'hidden';
   }
 
   function closeAbout() {
@@ -164,22 +171,15 @@
     document.body.style.overflow = '';
   }
 
-  if (aboutButton) {
-    aboutButton.addEventListener('click', openAbout);
-  }
+  if (aboutButton) aboutButton.addEventListener('click', openAbout);
+  if (aboutClose) aboutClose.addEventListener('click', closeAbout);
 
-  if (aboutClose) {
-    aboutClose.addEventListener('click', closeAbout);
-  }
-
-  // Click outside the card to close
   aboutOverlay.addEventListener('click', (event) => {
     if (event.target === aboutOverlay || event.target.classList.contains('overlay-backdrop')) {
       closeAbout();
     }
   });
 
-  // Press Escape to close
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && !aboutOverlay.classList.contains('hidden')) {
       closeAbout();
@@ -193,7 +193,12 @@
 
   <main class="hero">
     <div class="hero-content">
-      <h1 class="hero-title hero-underline">Vincent Louis Claes</h1>
+
+      <div class="hero-top">
+        <h1 class="hero-title">Vincent Louis Claes</h1>
+        <div class="hero-bar"></div>
+      </div>
+
       <div class="hero-buttons">
         <a href="about.html" class="hero-button" data-open-about>ABOUT</a>
         <a href="research.html">Research</a>
@@ -205,7 +210,6 @@
     </div>
   </main>
 
-  <!-- FIXED copyright at bottom of page -->
   <p class="page-footer">&copy; 2025 Vincent Louis Claes</p>
 
 </body>
