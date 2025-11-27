@@ -15,9 +15,9 @@
       display: flex;
       align-items: flex-start;
       justify-content: center;
-      text-align: center;
       background: url("background.jpg") center/cover no-repeat fixed;
       position: relative;
+      text-align: center;
     }
 
     /* Dark overlay on hero */
@@ -33,46 +33,38 @@
       z-index: 1;
       margin-top: 33vh;
       padding: 0;
+      text-align: center;
     }
 
-    /* Name + bar group */
-    .hero-top {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 1.8rem;
+    /* Shrink-wrapped block that controls width of title, bar, and buttons */
+    .hero-block {
+      display: inline-block;   /* width = content (the button row) */
     }
 
     .hero-title {
       font-size: 3rem;
       color: #ffffff;
       margin: 0;
-      width: 560px;        /* same width as bar + buttons */
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
     }
 
+    /* Underline bar – matches button row width via .hero-block */
     .hero-bar {
-      width: 560px;        /* matches buttons */
-      max-width: 90%;
+      width: 100%;
       height: 2px;
       background: rgba(255, 255, 255, 0.45);
-      margin: 0.8rem auto 0;
+      margin: 0.8rem 0 1.6rem;
     }
 
-    /* Buttons row – back to the “beautiful” layout */
+    /* Buttons: single nice row */
     .hero-buttons {
-      width: 560px;        /* same width as name + bar */
-      max-width: 90%;
-      margin: 1.8rem auto 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 0.5rem 0.9rem;
     }
 
     .hero-buttons a {
       display: inline-block;
-      margin: 0.5rem 0.75rem;
       padding: 0.7rem 1.6rem;
       border: 1px solid #ffffff;
       border-radius: 6px;
@@ -82,6 +74,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       transition: background 0.25s, transform 0.25s;
+      white-space: nowrap;
     }
 
     .hero-buttons a:hover {
@@ -103,21 +96,23 @@
     }
 
     /* Mobile responsiveness */
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .hero-title {
         font-size: 2.2rem;
+      }
+
+      .hero-block {
         width: 80%;
       }
-      .hero-bar {
-        width: 80%;
-      }
+
       .hero-buttons {
-        width: 80%;
+        flex-wrap: wrap;       /* allow wrapping on small screens */
+        justify-content: center;
       }
+
       .hero-buttons a {
-        display: block;
-        margin: 0.4rem auto;
         width: 100%;
+        text-align: center;
       }
     }
   </style>
@@ -211,17 +206,17 @@
 
   <main class="hero">
     <div class="hero-content">
-      <div class="hero-top">
+      <div class="hero-block">
         <h1 class="hero-title">Vincent Louis Claes</h1>
         <div class="hero-bar"></div>
-      </div>
 
-      <div class="hero-buttons">
-        <a href="about.html" class="hero-button" data-open-about>ABOUT</a>
-        <a href="research.html">Research</a>
-        <a href="cv.html">CV</a>
-        <a href="interests.html">Other Interests</a>
-        <a href="contact.html">Contact</a>
+        <div class="hero-buttons">
+          <a href="about.html" class="hero-button" data-open-about>ABOUT</a>
+          <a href="research.html">RESEARCH</a>
+          <a href="cv.html">CV</a>
+          <a href="interests.html">OTHER INTERESTS</a>
+          <a href="contact.html">CONTACT</a>
+        </div>
       </div>
     </div>
   </main>
