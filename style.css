@@ -265,6 +265,11 @@ a:hover {
   margin-bottom: 2.2rem;
 }
 
+.hero-title {
+  width: 560px;  /* same as buttons + underline */
+  max-width: 90%;
+}
+
 .hero-bar {
   width: 560px;
   max-width: 80%;
