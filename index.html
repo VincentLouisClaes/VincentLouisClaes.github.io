@@ -58,10 +58,13 @@
     /* Buttons: single nice row */
     .hero-buttons {
       display: flex;
+      flex-wrap: nowrap !important;  /* <-- NEVER wrap */
       justify-content: center;
-      flex-wrap: nowrap;
       gap: 0.5rem 0.9rem;
+      width: max-content;            /* <-- shrink-wrap to full button row */
+      margin: 1.8rem auto 0;
     }
+
 
     .hero-buttons a {
       display: inline-block;
