@@ -1712,7 +1712,7 @@ input, select, textarea {
   }
 }
 
-/* === Vincent: custom background image === */
+/* === Vincent: custom background image (no blur, not super dark) === */
 
 #bg:before {
   background-image: url("../images/background.jpg") !important;
@@ -1720,8 +1720,15 @@ input, select, textarea {
   background-position: center !important;
   background-repeat: no-repeat !important;
   opacity: 1 !important;
+
+  /* kill the Dimension blur + zoom */
+  -webkit-filter: none !important;
+  filter: none !important;
+  -webkit-transform: none !important;
+  transform: none !important;
 }
 
+/* dark overlay – make this lighter so the image is visible */
 #bg:after {
-  background: rgba(0, 0, 0, 0.55) !important; /* darken overlay for contrast */
+  background: rgba(0, 0, 0, 0.25) !important;  /* try 0.2–0.3 range */
 }
